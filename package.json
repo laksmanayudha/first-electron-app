@@ -1,0 +1,15 @@
+{
+  "name": "first-electron-app",
+  "version": "1.0.0",
+  "description": "learn electronjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "YudhaL",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1"
+  }
+}
