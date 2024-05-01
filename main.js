@@ -1,6 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
+const { updateElectronApp } = require('update-electron-app');
 const path = require('path');
-require('update-electron-app')();
+const packageJson = require('./package.json');
+
+updateElectronApp();
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -16,7 +19,10 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-  ipcMain.handle('ping', () => 'pong');
+  const handlePingChannel = () => ({
+    appVersion: packageJson.version
+  });
+  ipcMain.handle('ping', handlePingChannel);
   createWindow();
 
   app.on('activate', () => {
