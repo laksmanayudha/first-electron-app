@@ -1,6 +1,6 @@
 {
   "name": "first-electron-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "learn electronjs",
   "main": "main.js",
   "scripts": {
